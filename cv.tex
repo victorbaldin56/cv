@@ -1,0 +1,228 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Wenneker Resume/CV
+% LaTeX Template
+% Version 1.1 (19/6/2016)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com) with extensive modifications by
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{memoir} % Font and paper size
+
+\input{structure.tex} % Include the file specifying document layout and packages
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\userinformation{ % Set the content that goes into the sidebar of each page
+\begin{flushright}
+% Comment out this figure block if you don't want a photo
+\includegraphics[width=0.6\columnwidth]{photo.jpg}\\[\baselineskip] % Your photo
+\small % Smaller font size
+Baldin Viktor \\ % Your name
+\href{mailto:baldin.va@phystech.edu}{baldin.va@phystech.edu} \\ % Your email address
+\href{https://github.com/victorbaldin56}{github.com/victorbaldin56} \\ % Your URL
+%\href{https://t.me/victorbaldin_111}{t.me/victorbaldin_111} \\
++7 (916) 582 00 45 \\ % Your phone number
+\Sep % Some whitespace
+\textbf{Address} \\
+34/5 Pervomayskaya St \\ % Address 1
+Dolgoprudny, State 141700 \\ % Address 2
+Russia \\ % Address 3
+\vfill % Whitespace under this block to push it up under the photo
+\end{flushright}
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\userinformation % Print your information in the left column
+
+\framebreak % End of the first column
+
+%----------------------------------------------------------------------------------------
+%	HEADING
+%----------------------------------------------------------------------------------------
+
+\cvheading{Baldin Viktor} % Large heading - your name
+
+%\cvsubheading{Software Engineer} % Subheading - your occupation/specialization
+
+%----------------------------------------------------------------------------------------
+%	ABOUT ME
+%----------------------------------------------------------------------------------------
+
+\aboutme{About Me}{
+For the last year I have been learning low-level programming in C with a little use of C++ OOP.
+}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\CVSection{Education}
+
+%------------------------------------------------
+
+\CVItem{Bachelor, MIPT}{
+Bachelor in Applied Mathematics and Physics,
+Department of Radio Engeneering and Cybernetics (2023 - present)
+}
+
+\CVItem{Educational courses}{
+\begin{itemize}
+    \item I. R. Dedinsky's "Introduction to Computer System emulation, compiler technologies and
+    industrial programming" (2023 - 2024)
+\end{itemize}
+}
+
+%------------------------------------------------
+
+\Sep % Extra whitespace after the end of a major section
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\CVSection{Projects}
+
+%------------------------------------------------
+
+\CVItem{Processor}{
+Simple processor emulator with its own stack-based architecture.\\
+Link: \url{https://github.com/victorbaldin56/processor}
+}
+
+\CVItem{Differenciator}{
+A derivative calculator with step-by-step solution. Creates AST for input
+mathematical expression and evaluates a derivative by performing operations on AST.\\
+Link: \url{https://github.com/victorbaldin56/differenciator}
+}
+
+\CVItem{Mandelbrot}{
+Mandelbrot fractal
+graphical generator built with use of SFML. The main goal of this project was the
+research of SIMD instructions to speed up calculations up to several times.\\
+Link: \url{https://github.com/victorbaldin56/mandelbrot_fractal}
+}
+
+\CVItem{Hash Map}{
+Educational project to master skills of agressive platform-dependent optimizations.\\
+Link: \url{https://github.com/victorbaldin56/hashmap}
+}
+
+\CVItem{Binary Translator}{
+Continuation of "Processor" project. Translates emulator's bytecode to real x86 opcodes.
+Supports dump as NASM assembly or JIT native code execution.\\
+Link: \url{https://github.com/victorbaldin56/binary_translator}
+}
+
+\Sep % Extra whitespace after the end of a major section
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS
+%----------------------------------------------------------------------------------------
+
+%\CVSection{Communication Skills}
+%
+%%------------------------------------------------
+%
+%\CVItem{2015, \textit{Oral Presentation}, California Business Conference}{Presented research I conducted for my Masters of Engineering degree.}
+%
+%%------------------------------------------------
+%
+%\CVItem{2014, \textit{Poster}, Annual Business Conference (Oregon)}{As part of the course work for BUS320, I created a poster analyzing several local businesses and presented this at a conference.}
+%
+%%------------------------------------------------
+%
+%\Sep % Extra whitespace after the end of a major section
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+
+\CVSection{Software Development Skills}
+
+%------------------------------------------------
+
+\CVItem{Programming}
+{\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth}}
+\bluebullet C &  \bluebullet C++ \\
+\bluebullet x86 Assembly & \bluebullet Unix Shell\\
+\bluebullet Python &  \bluebullet \LaTeX\\
+\bluebullet Make &   \bluebullet CMake\\
+\end{tabular}}
+
+%------------------------------------------------
+
+\CVItem{Toolchain}
+{\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth}}
+\bluebullet Profilers (Perf, Valgrind) &  \bluebullet Debuggers (GDB) \\
+\bluebullet Assemblers (NASM) &  \bluebullet Disassemblers (objdump)  \\
+\bluebullet Version control (Git)
+\end{tabular}}
+
+%------------------------------------------------
+
+\Sep % Extra whitespace after the end of a major section
+
+%----------------------------------------------------------------------------------------
+%	NEW PAGE DELIMITER
+%	Place this block wherever you would like the content of your CV to go onto the next page
+%----------------------------------------------------------------------------------------
+
+%\clearpage % Start a new page
+%
+%\userinformation % Print your information in the left column
+%
+%\framebreak % End of the first column
+%
+%%----------------------------------------------------------------------------------------
+%%	AWARDS
+%%----------------------------------------------------------------------------------------
+%
+%\CVSection{Awards}
+%
+%%------------------------------------------------
+%
+%\CVItem{2010, \textit{Postgraduate Scholarship}, Cornell University}{Awarded to the top student in their final year of a Bachelors degree.}
+%
+%%------------------------------------------------
+%
+%\Sep % Extra whitespace after the end of a major section
+%
+%%----------------------------------------------------------------------------------------
+%%	INTERESTS
+%%----------------------------------------------------------------------------------------
+%
+%\CVSection{Interests}
+%
+%%------------------------------------------------
+%
+%\CVItem{Professional}{Data analysis, company profiling, risk analysis, economics, web design, web app creation, software design, marketing}
+%
+%%------------------------------------------------
+%
+%\CVItem{Personal}{Piano, chess, cooking, dancing, running}
+%
+%%------------------------------------------------
+%
+%\Sep % Extra whitespace after the end of a major section
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
