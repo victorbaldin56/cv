@@ -33,7 +33,7 @@
 \includegraphics[width=0.6\columnwidth]{photo.jpg}\\[\baselineskip] % Your photo
 \small % Smaller font size
 Viktor Baldin \\ % Your name
-\href{mailto:baldin.va@phystech.edu}{baldin.va@phystech.edu} \\ % Your email address
+\href{mailto:v1cbaldin@yandex.ru}{v1cbaldin@yandex.ru} \\ % Your email address
 \href{https://github.com/victorbaldin56}{github.com/victorbaldin56} \\ % Your URL
 %\href{https://t.me/victorbaldin_111}{t.me/victorbaldin_111} \\
 +7 (916) 582 00 45 \\ % Your phone number
@@ -60,7 +60,7 @@ Russia \\ % Address 3
 
 \cvheading{Viktor Baldin} % Large heading - your name
 
-%\cvsubheading{Software Engeneer Job Candidate} % Subheading - your occupation/specialization
+%\cvsubheading{} % Subheading - your occupation/specialization
 
 %----------------------------------------------------------------------------------------
 %	ABOUT ME
@@ -119,20 +119,22 @@ Link: \url{https://github.com/victorbaldin56/differenciator}
 
 \CVItem{Mandelbrot}{
 Mandelbrot fractal
-graphical generator built with use of SFML. The main goal of this project was the
-research of SIMD instructions to speed up calculations up to several times.\\
+renderer built with use of SFML. The main goal of this project was the
+research of SIMD instructions to speed up calculations up to several times. On my machine,
+I have reached 7.4 times acceleration with use of AVX2 instructions.\\
 Link: \url{https://github.com/victorbaldin56/mandelbrot_fractal}
 }
 
 \CVItem{Hash Map}{
 Accelerated implementation of hash map.
-Educational project to master skills of agressive platform-dependent optimizations.\\
+Educational project to master skills of agressive platform-dependent optimizations.
+As the result, on my machine search by key was speeded up by 2.8 times.\\
 Link: \url{https://github.com/victorbaldin56/hashmap}
 }
 
 \CVItem{Binary Translator}{
 Continuation of "Processor" project. Translates emulator's bytecode to real x86 opcodes.
-Supports dump as NASM assembly or JIT native code execution.\\
+Supports dump as NASM assembly annotated with debug info. The other option is JIT native code execution.\\
 Link: \url{https://github.com/victorbaldin56/binary_translator}
 }
 
@@ -142,18 +144,24 @@ Link: \url{https://github.com/victorbaldin56/binary_translator}
 %	COMMUNICATION SKILLS
 %----------------------------------------------------------------------------------------
 
-\CVSection{Communication skills}
+\CVSection{Soft Skills}
 
 \CVItem{Languages}{
-\begin{itemize}
-    \item Russian (native)
-    \item English (Intermediate)
-\end{itemize}
-}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth}}
+    \bluebullet Russian (native) & \bluebullet English (Intermediate)
+\end{tabular}}
+
+\CVItem{Personal Qualities}
+{\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth}}
+\bluebullet Purposeful &  \bluebullet Hard-working \\
+\bluebullet Sociable & \bluebullet Reliable\\
+\bluebullet Creative &  \bluebullet Quick learner\\
+\bluebullet Punctual\\
+\end{tabular}}
 
 \Sep
 
-\CVSection{Software development skills}
+\CVSection{Hard Skills}
 
 %------------------------------------------------
 
@@ -178,6 +186,21 @@ Link: \url{https://github.com/victorbaldin56/binary_translator}
 
 \Sep % Extra whitespace after the end of a major section
 
+%----------------------------------------------------------------------------------------
+%	NEW PAGE DELIMITER
+%	Place this block wherever you would like the content of your CV to go onto the next page
+%----------------------------------------------------------------------------------------
+
+\clearpage % Start a new page
+
+\userinformation % Print your information in the left column
+
+\framebreak % End of the first column
+
+%----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
+
 \CVSection{Awards}
 
 \CVItem{Olympiads}{
@@ -189,49 +212,6 @@ Link: \url{https://github.com/victorbaldin56/binary_translator}
 }
 
 \Sep
-
-%----------------------------------------------------------------------------------------
-%	NEW PAGE DELIMITER
-%	Place this block wherever you would like the content of your CV to go onto the next page
-%----------------------------------------------------------------------------------------
-
-%\clearpage % Start a new page
-%
-%\userinformation % Print your information in the left column
-%
-%\framebreak % End of the first column
-%
-%%----------------------------------------------------------------------------------------
-%%	AWARDS
-%%----------------------------------------------------------------------------------------
-%
-%\CVSection{Awards}
-%
-%%------------------------------------------------
-%
-%\CVItem{2010, \textit{Postgraduate Scholarship}, Cornell University}{Awarded to the top student in their final year of a Bachelors degree.}
-%
-%%------------------------------------------------
-%
-%\Sep % Extra whitespace after the end of a major section
-%
-%%----------------------------------------------------------------------------------------
-%%	INTERESTS
-%%----------------------------------------------------------------------------------------
-%
-%\CVSection{Interests}
-%
-%%------------------------------------------------
-%
-%\CVItem{Professional}{Data analysis, company profiling, risk analysis, economics, web design, web app creation, software design, marketing}
-%
-%%------------------------------------------------
-%
-%\CVItem{Personal}{Piano, chess, cooking, dancing, running}
-%
-%%------------------------------------------------
-%
-%\Sep % Extra whitespace after the end of a major section
 
 %----------------------------------------------------------------------------------------
 
