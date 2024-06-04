@@ -117,8 +117,16 @@ math expression using recursive descent and evaluates a derivative by transformi
 Supports output as {\LaTeX} markup, also uses GraphViz package to dump the input AST.
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.4]{diff_graphviz_sample.eps}
-    \caption{Dumped AST}
+
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[height=0.2\textheight]{diff_graphviz_sample.eps}
+        \caption{Dumped AST}
+    \end{subfigure}
+    \hspace{1.5cm}
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[height=0.2\textheight]{diff_tex.png}
+        \caption{{\LaTeX} PDF output}
+    \end{subfigure}
 \end{figure}
 
 Link: \url{https://github.com/victorbaldin56/differenciator}
