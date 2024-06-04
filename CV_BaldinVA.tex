@@ -35,7 +35,6 @@
 Viktor Baldin \\ % Your name
 \href{mailto:v1cbaldin@yandex.ru}{v1cbaldin@yandex.ru} \\ % Your email address
 \href{https://github.com/victorbaldin56}{github.com/victorbaldin56} \\ % Your URL
-%\href{https://t.me/victorbaldin_111}{t.me/victorbaldin_111} \\
 +7 (916) 582 00 45 \\ % Your phone number
 \Sep % Some whitespace
 \textbf{Address} \\
@@ -60,7 +59,7 @@ Russia \\ % Address 3
 
 \cvheading{Viktor Baldin} % Large heading - your name
 
-%\cvsubheading{} % Subheading - your occupation/specialization
+\cvsubheading{MIPT Bachelor} % Subheading - your occupation/specialization
 
 %----------------------------------------------------------------------------------------
 %	ABOUT ME
@@ -117,6 +116,13 @@ math expression using recursive descent and evaluates a derivative by transformi
 Link: \url{https://github.com/victorbaldin56/differenciator}
 }
 
+\CVItem{DOS Tasks}{
+Small pure assembly programs for MS-DOS.
+The main purpose of this part was to get general understanding of x86 assembly and
+hardware interrupts handling.\\
+Link: \url{https://github.com/victorbaldin56/dos-tasks}
+}
+
 \CVItem{Miniprintf}{
 Simplified implementation of \texttt{printf} function in pure NASM assembly for x86-64
 Linux.\\
@@ -129,6 +135,19 @@ renderer built with use of SFML. The main goal of this project was the
 research of SIMD instructions to speed up calculations up to several times. On my machine
 I have reached 7.4 times acceleration with use of AVX2 instructions.\\
 Link: \url{https://github.com/victorbaldin56/mandelbrot_fractal}
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.2\textwidth}
+        \includegraphics[width=\textwidth]{mandelbrot.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.2\textwidth}
+        \includegraphics[width=\textwidth]{zoomed.png}
+    \end{subfigure}
+
+    \caption{Rendered Mandelbrot fractal}
+\end{figure}
+
 }
 
 \CVItem{Hash Map}{
@@ -139,7 +158,7 @@ Link: \url{https://github.com/victorbaldin56/hashmap}
 }
 
 \CVItem{Binary Translator}{
-Translates my CPU emulator's bytecode to real x86 opcodes.
+Translates my CPU emulator's bytecode to native x86 instructions.
 Supports generating NASM assembly or JIT.\\
 Link: \url{https://github.com/victorbaldin56/binary_translator}
 }
@@ -147,8 +166,15 @@ Link: \url{https://github.com/victorbaldin56/binary_translator}
 \Sep % Extra whitespace after the end of a major section
 
 %----------------------------------------------------------------------------------------
-%	COMMUNICATION SKILLS
+%	NEW PAGE DELIMITER
+%	Place this block wherever you would like the content of your CV to go onto the next page
 %----------------------------------------------------------------------------------------
+
+\clearpage % Start a new page
+
+\userinformation % Print your information in the left column
+
+\framebreak % End of the first column
 
 \CVSection{Soft Skills}
 
@@ -183,29 +209,14 @@ Link: \url{https://github.com/victorbaldin56/binary_translator}
 
 \CVItem{Toolchain}
 {\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth}}
-\bluebullet Profilers (Perf, Valgrind) &  \bluebullet Debuggers (GDB) \\
+\bluebullet Compilers (GCC, Clang) &  \bluebullet Debuggers (GDB) \\
 \bluebullet Assemblers (NASM) &  \bluebullet Disassemblers (objdump)  \\
-\bluebullet Version control (Git)
+\bluebullet Profilers (Perf, Valgrind) & \bluebullet Version control (Git)\\
 \end{tabular}}
 
 %------------------------------------------------
 
 \Sep % Extra whitespace after the end of a major section
-
-%----------------------------------------------------------------------------------------
-%	NEW PAGE DELIMITER
-%	Place this block wherever you would like the content of your CV to go onto the next page
-%----------------------------------------------------------------------------------------
-
-\clearpage % Start a new page
-
-\userinformation % Print your information in the left column
-
-\framebreak % End of the first column
-
-%----------------------------------------------------------------------------------------
-%	AWARDS
-%----------------------------------------------------------------------------------------
 
 \CVSection{Awards}
 
@@ -213,6 +224,7 @@ Link: \url{https://github.com/victorbaldin56/binary_translator}
 \begin{itemize}
     \item Phystech Olympiad in Physics, 2nd degree (2023)
     \item Kurchatov Olympiad in Physics, 2nd degree (2023)
+    \item Rosatom Olympiad in Physics, 3rd degree (2023)
     \item Regional Russian Olympiad in Physics, 1st degree (2023)
 \end{itemize}
 }
