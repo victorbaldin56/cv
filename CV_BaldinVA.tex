@@ -114,17 +114,17 @@ Link: \url{https://github.com/victorbaldin56/processor}
 \CVItem{Differenciator}{
 Derivative calculator with step-by-step solution. Creates AST for
 math expression using recursive descent and evaluates a derivative by transforming AST.
-Supports output as {\LaTeX} markup, also uses GraphViz package to dump the input AST.
+Supports output as PDF using {\LaTeX}, also uses GraphViz package to dump the input AST.
+Additionally, annotates PDF with solution using random ChatGPT-generated phrases.
 \begin{figure}[h]
     \centering
 
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[height=0.2\textheight]{diff_graphviz_sample.eps}
+    \begin{subfigure}[b]{0.34\textwidth}
+        \includegraphics[width=\textwidth]{diff_graphviz_sample.eps}
         \caption{Dumped AST}
     \end{subfigure}
-    \hspace{1.5cm}
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[height=0.2\textheight]{diff_tex.png}
+    \begin{subfigure}[b]{0.34\textwidth}
+        \includegraphics[width=\textwidth]{diff_tex_cropped.png}
         \caption{{\LaTeX} PDF output}
     \end{subfigure}
 \end{figure}
