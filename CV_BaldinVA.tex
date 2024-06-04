@@ -106,18 +106,26 @@ Department of Radio Engeneering and Cybernetics (2023 - present)
 %------------------------------------------------
 
 \CVItem{Processor}{
-Simple CPU emulator with its own stack-based architecture.\\
+Simple CPU emulator with its own stack-based architecture.
+Numeric calculations implemented as floating point arithmetic only.\\
 Link: \url{https://github.com/victorbaldin56/processor}
 }
 
 \CVItem{Differenciator}{
 Derivative calculator with step-by-step solution. Creates AST for
-math expression using recursive descent and evaluates a derivative by transforming AST.\\
+math expression using recursive descent and evaluates a derivative by transforming AST.
+Supports output as {\LaTeX} markup, also uses GraphViz package to dump the input AST.
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.4]{diff_graphviz_sample.eps}
+    \caption{Dumped AST}
+\end{figure}
+
 Link: \url{https://github.com/victorbaldin56/differenciator}
 }
 
 \CVItem{DOS Tasks}{
-Small pure assembly programs for MS-DOS.
+Relatively small pure assembly programs for MS-DOS.
 The main purpose of this part was to get general understanding of x86 assembly and
 hardware interrupts handling.\\
 Link: \url{https://github.com/victorbaldin56/dos-tasks}
@@ -133,37 +141,7 @@ Link: \url{https://github.com/victorbaldin56/miniprintf}
 Mandelbrot fractal
 renderer built with use of SFML. The main goal of this project was the
 research of SIMD instructions to speed up calculations up to several times. On my machine
-I have reached 7.4 times acceleration with use of AVX2 instructions.\\
-Link: \url{https://github.com/victorbaldin56/mandelbrot_fractal}
-
-\begin{figure}[h]
-    \centering
-    \begin{subfigure}[b]{0.2\textwidth}
-        \includegraphics[width=\textwidth]{mandelbrot.png}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.2\textwidth}
-        \includegraphics[width=\textwidth]{zoomed.png}
-    \end{subfigure}
-
-    \caption{Rendered Mandelbrot fractal}
-\end{figure}
-
-}
-
-\CVItem{Hash Map}{
-Accelerated implementation of hash map.
-Educational project to master skills of agressive platform-dependent optimizations with intrinsics and assembly.
-As the result, search by key has been speeded up by 2.8 times.\\
-Link: \url{https://github.com/victorbaldin56/hashmap}
-}
-
-\CVItem{Binary Translator}{
-Translates my CPU emulator's bytecode to native x86 instructions.
-Supports generating NASM assembly or JIT.\\
-Link: \url{https://github.com/victorbaldin56/binary_translator}
-}
-
-\Sep % Extra whitespace after the end of a major section
+I have reached 7.4 times acceleration with use of AVX2 instructions.
 
 %----------------------------------------------------------------------------------------
 %	NEW PAGE DELIMITER
@@ -175,6 +153,40 @@ Link: \url{https://github.com/victorbaldin56/binary_translator}
 \userinformation % Print your information in the left column
 
 \framebreak % End of the first column
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=\textwidth]{mandelbrot.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=\textwidth]{zoomed.png}
+    \end{subfigure}
+
+    \caption{Rendered Mandelbrot fractal}
+\end{figure}
+
+Link: \url{https://github.com/victorbaldin56/mandelbrot_fractal}
+}
+
+\CVItem{Hash Map}{
+Accelerated implementation of hash map.
+The first part of this work was to compare hash functions by their distribution.
+The second part was to master skills of agressive platform-dependent optimizations with intrinsics and assembly.
+As the result, search by key has been speeded up by 2.8 times.\\
+Link: \url{https://github.com/victorbaldin56/hashmap}
+}
+
+\CVItem{Binary Translator}{
+Translates my CPU emulator's bytecode to native x86 instructions.
+Supports generating NASM assembly or JIT. Has extensible architecture and internal
+intermediate representation (IR), that allows to create backends for multiple
+target architectures. This is the same principle that underlies the work of GCC and
+LLVM infrastructures. \\
+Link: \url{https://github.com/victorbaldin56/binary_translator}
+}
+
+\Sep % Extra whitespace after the end of a major section
 
 \CVSection{Soft Skills}
 
@@ -188,7 +200,7 @@ Link: \url{https://github.com/victorbaldin56/binary_translator}
 \bluebullet Purposeful &  \bluebullet Hard-working \\
 \bluebullet Sociable & \bluebullet Reliable\\
 \bluebullet Creative &  \bluebullet Quick learner\\
-\bluebullet Punctual\\
+\bluebullet Punctual &  \bluebullet Critical thinker\\
 \end{tabular}}
 
 \Sep
