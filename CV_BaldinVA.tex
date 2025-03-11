@@ -1,243 +1,379 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Wenneker Resume/CV
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Developer CV
 % LaTeX Template
-% Version 1.1 (19/6/2016)
+% Version 1.0 (28/1/19)
 %
-% This template has been downloaded from:
+% This template originates from:
 % http://www.LaTeXTemplates.com
 %
-% Original author:
-% Frits Wenneker (http://www.howtotex.com) with extensive modifications by
-% Vel (vel@LaTeXTemplates.com)
+% Authors:
+% Jan Vorisek (jan@vorisek.me)
+% Based on a template by Jan Küster (info@jankuester.com)
+% Modified for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
 %
 % License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/
+% The MIT License (see included LICENSE file)
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[a4paper,10pt]{memoir} % Font and paper size
-
-\input{structure.tex} % Include the file specifying document layout and packages
-
-%----------------------------------------------------------------------------------------
-%	NAME AND CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
-
-\userinformation{ % Set the content that goes into the sidebar of each page
-\begin{flushright}
-% Comment out this figure block if you don't want a photo
-\includegraphics[width=0.6\columnwidth]{photo.jpg}\\[\baselineskip] % Your photo
-\small % Smaller font size
-Viktor Baldin \\ % Your name
-\href{mailto:v1cbaldin@yandex.ru}{v1cbaldin@yandex.ru} \\ % Your email address
-\href{https://github.com/victorbaldin56}{github.com/victorbaldin56} \\ % Your URL
-+7 (916) 582 00 45 \\ % Your phone number
-\Sep % Some whitespace
-\textbf{Address} \\
-34/5 Pervomayskaya St \\ % Address 1
-Dolgoprudny, State 141700 \\ % Address 2
-Russia \\ % Address 3
-\vfill % Whitespace under this block to push it up under the photo
-\end{flushright}
-}
+\documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
 
-\userinformation % Print your information in the left column
-
-\framebreak % End of the first column
-
 %----------------------------------------------------------------------------------------
-%	HEADING
+%	TITLE AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\cvheading{Viktor Baldin} % Large heading - your name
+\begin{minipage}[t]{0.4\textwidth} % 45% of the page width for name
+        \vspace{-\baselineskip} % Required for vertically aligning minipages
 
-\cvsubheading{Software Engeneer} % Subheading - your occupation/specialization
+        % If your name is very short, use just one of the lines below
+        % If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
+        \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Viktor}}}}} % First name
+
+        \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Baldin}}}}} % Last name
+
+        \vspace{6pt}
+
+        {\huge Software Engineer} % Career or current job title
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth} % 27.5% of the page width for the first row of icons
+        \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+        % The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+        % Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+        \icon{MapMarker}{12}{Dolgoprudny, Russia}\\
+        \icon{Phone}{12}{+7 916 582 00 45}\\
+        \icon{At}{12}{\href{mailto:v1cbaldin@yandex.ru}{v1cbaldin@yandex.ru}}\\
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth} % 27.5% of the page width for the second row of icons
+        \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+        % The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+        % Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+        %\icon{Globe}{12}{\href{https://alyx.vance.me}{alyx.vance.me}}\\
+        \icon{Github}{12}{\href{https://github.com/victorbaldin56}{github.com/victorbaldin56}}\\
+        \icon{Telegram}{12}{\href{https://t.me/victorbaldin56}{@victorbaldin56}}\\
+        %\icon{Linkedin}{12}{\href{https://www.linkedin.com/in/victorbaldin56/}{@victorbaldin56}}\\
+
+\end{minipage}
+
+\vspace{0.5cm}
 
 %----------------------------------------------------------------------------------------
-%	ABOUT ME
+%	INTRODUCTION, SKILLS AND TECHNOLOGIES
 %----------------------------------------------------------------------------------------
 
-\aboutme{About Me}{
-I am undergraduate MIPT student. Currently I am learning low-level programming because it is interesting
-for me to know how actually hardware work. For the last year I have been mastering skills of
-C (with a little C++) and assembly programming.
-My hobbies are: sports (running), chess, cooking, volunteering.
-}
+\cvsect{About Myself}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
+\begin{minipage}[t]{0.4\textwidth} % 40% of the page width for the introduction text
+        \vspace{-\baselineskip} % Required for vertically aligning minipages
+        I am currently undergraduate MIPT student.
 
-\CVSection{Education}
+\end{minipage}
+\hfill % Whitespace between
+\begin{minipage}[t]{0.5\textwidth} % 50% of the page for the skills bar chart
+        \vspace{-\baselineskip} % Required for vertically aligning minipages
+        \begin{barchart}{5.5}
+                \baritem{C}{90}
+                \baritem{C++}{50}
+                \baritem{CUDA}{30}
+                \baritem{Git}{70}
+                \baritem{Python}{65}
+                \baritem{DevOps}{60}
+        \end{barchart}
+\end{minipage}
 
-%------------------------------------------------
-
-\CVItem{Bachelor, MIPT}{
-Bachelor in Applied Mathematics and Physics,
-Department of Radio Engeneering and Cybernetics (2023 - present)
-}
-
-\CVItem{Educational courses}{
-\begin{itemize}
-    \item I. R. Dedinsky's "Introduction to Computer System emulation, compiler technologies and
-    industrial programming" (2023 - 2024)
-\end{itemize}
-}
-
-%------------------------------------------------
-
-\Sep % Extra whitespace after the end of a major section
-
+% \begin{center}
+% 	\bubbles{5/Eclipse, 6/git, 4/Office, 3/Inkscape, 3/Blender}
+% \end{center}
 
 %----------------------------------------------------------------------------------------
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-\CVSection{Projects}
+\cvsect{Experience}
 
-%------------------------------------------------
+\begin{entrylist}
+        \entry
+                {2024 -- present}
+                {C/C++ developer}
+                {Baikal Electronics (AI team)}
+                {Improvements for the internal simulator of GPGPU, benchmarking.\\
+                 Development of model of the communication between CUDA Runtime and OS driver for simulator.\\
+                 Research of CUDA Runtime internals.\\
+                  \texttt{C++}\slashsep\texttt{CUDA}\slashsep\texttt{GPGPU}
+                  \slashsep\texttt{SIMT}\slashsep\texttt{DevOps}\slashsep\texttt{Python}}
+        \entry
+                {2023 -- 2024}
+                {C/Assembly course (Dedinsky I. R.)}
+                {MIPT}
+                {Major projects:\\
+                 -- Binary translator\\
+                 \url{https://github.com/victorbaldin56/binary_translator}\\
+                 -- Aggressively optimized hash table\\
+                 \url{https://github.com/victorbaldin56/hashmap}\\
+                 -- Fractal renderer sped up using SIMD instructions\\
+                 \url{https://github.com/victorbaldin56/mandelbrot_fractal}\\
+                 -- DOS interruptions handling and hacking tasks\\
+                 \url{https://github.com/victorbaldin56/dos-tasks}\\
+                 -- Mathematical functions differentiation program\\
+                 \url{https://github.com/victorbaldin56/differenciator}\\
+                 -- CPU emulator with basic ISA\\
+                 \url{https://github.com/victorbaldin56/processor}\\
+                 \texttt{C}\slashsep\texttt{Assembly}\slashsep\texttt{Make}\slashsep\texttt{Linux}\slashsep\texttt{OS}\slashsep\texttt{SIMD}}
 
-\CVItem{Processor}{
-Simple CPU emulator with its own stack-based architecture.
-Numeric calculations implemented as floating point arithmetic only.\\
-Link: \url{https://github.com/victorbaldin56/processor}
-}
-
-\CVItem{Differenciator}{
-Derivative calculator with step-by-step solution. Creates AST for
-math expression using recursive descent and evaluates a derivative by transforming AST.
-Supports output as PDF using {\LaTeX}, also uses GraphViz package to dump the input AST.
-Additionally, annotates PDF with solution using random ChatGPT-generated phrases.
-Link: \url{https://github.com/victorbaldin56/differenciator}
-}
-
-\CVItem{DOS Tasks}{
-Relatively small pure assembly programs for MS-DOS.
-The main purpose of this part was to get general understanding of x86 assembly and
-hardware interrupts handling.\\
-Link: \url{https://github.com/victorbaldin56/dos-tasks}
-}
-
-\CVItem{Miniprintf}{
-Simplified implementation of \texttt{printf} function in pure NASM assembly for x86-64
-Linux.\\
-Link: \url{https://github.com/victorbaldin56/miniprintf}
-}
-
-\CVItem{Mandelbrot}{
-Mandelbrot fractal
-renderer built with use of SFML. The main goal of this project was the
-research of SIMD instructions to speed up calculations up to several times. On my machine
-I have reached 7.4 times acceleration with use of AVX2 instructions.
+        % \entry
+        % 	{2013 -- 2014\\\footnotesize{part time}}
+        % 	{Junior PHP Developer}
+        % 	{example.com}
+        % 	{\lorem\lorem\\ \texttt{PHP}\slashsep\texttt{Laravel}}
+\end{entrylist}
 
 %----------------------------------------------------------------------------------------
-%	NEW PAGE DELIMITER
-%	Place this block wherever you would like the content of your CV to go onto the next page
+%	EDUCATION
 %----------------------------------------------------------------------------------------
 
-\clearpage % Start a new page
+\cvsect{Education}
 
-\userinformation % Print your information in the left column
+\begin{entrylist}
+        \entry
+                {2023 -- present}
+                {Bachelor (Applied Mathematics and Physics)}
+                {MIPT (DREC)}
+                {GPA: 6.9/10.0 }
 
-\framebreak % End of the first column
+\end{entrylist}
 
-Link: \url{https://github.com/victorbaldin56/mandelbrot_fractal}
-}
+%----------------------------------------------------------------------------------------
+%	ADDITIONAL INFORMATION
+%----------------------------------------------------------------------------------------
 
-\CVItem{Hash Map}{
-Accelerated implementation of hash map.
-The first part of this work was to compare hash functions by their distribution.
-The second part was to master skills of agressive platform-dependent optimizations with intrinsics and assembly.
-As the result, search by key has been speeded up by 2.8 times.\\
-Link: \url{https://github.com/victorbaldin56/hashmap}
-}
+\begin{minipage}[t]{0.3\textwidth}
+        \vspace{-\baselineskip} % Required for vertically aligning minipages
 
-\CVItem{Binary Translator}{
-Translates my CPU emulator's bytecode to native x86 instructions.
-Supports generating NASM assembly or JIT. Has extensible architecture and internal
-intermediate representation (IR), that allows to create backends for multiple
-target architectures. This is the same principle that underlies the work of GCC and
-LLVM infrastructures. \\
-Link: \url{https://github.com/victorbaldin56/binary_translator}
-}
+        \cvsect{Languages}
 
-\Sep % Extra whitespace after the end of a major section
+        \textbf{Russian} - native\\
+        \textbf{English} - intermediate
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+        \vspace{-\baselineskip} % Required for vertically aligning minipages
 
-\CVSection{Soft Skills}
+        \cvsect{Hard Skills}
 
-\CVItem{Languages}{
-\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth}}
-    \bluebullet Russian (native) & \bluebullet English (Intermediate)
-\end{tabular}}
+        -- C, C++, CUDA\\
+        -- Assembly\\
+        -- GPU SIMT programming\\
+        -- Linux, Shell\\
+        -- CI/CD (GitLab, Github), Docker\\
+        -- Python
 
-\CVItem{Personal Qualities}
-{\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth}}
-\bluebullet Purposeful &  \bluebullet Hard-working \\
-\bluebullet Sociable & \bluebullet Reliable\\
-\bluebullet Creative &  \bluebullet Quick learner\\
-\bluebullet Punctual &  \bluebullet Critical thinker\\
-\end{tabular}}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+        \vspace{-\baselineskip} % Required for vertically aligning minipages
 
-\Sep
+        \cvsect{Soft skills}
 
-\CVSection{Hard Skills}
-
-%------------------------------------------------
-
-\CVItem{Programming}
-{\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth}}
-\bluebullet C &  \bluebullet C++ \\
-\bluebullet x86 Assembly & \bluebullet Unix Shell\\
-\bluebullet Python &  \bluebullet \LaTeX\\
-\bluebullet Make &   \bluebullet CMake\\
-\end{tabular}}
-
-%------------------------------------------------
-
-\CVItem{Toolchain}
-{\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth}}
-\bluebullet Compilers (GCC, Clang) &  \bluebullet Debuggers (GDB) \\
-\bluebullet Assemblers (NASM) &  \bluebullet Disassemblers (objdump)  \\
-\bluebullet Profilers (Perf, Valgrind) & \bluebullet Version control (Git)\\
-\end{tabular}}
-
-%------------------------------------------------
-
-\Sep % Extra whitespace after the end of a major section
-
-\CVSection{Grades}
-
-\CVItem{GPA Overall}{
-7.7/10
-}
-
-\CVItem{GPA for Programming}{
-7.5/10
-}
-
-\Sep
-
-\CVSection{Awards}
-
-\CVItem{Olympiads}{
-\begin{itemize}
-    \item Phystech Olympiad in Physics, 2nd degree (2023)
-    \item Kurchatov Olympiad in Physics, 2nd degree (2023)
-    \item Rosatom Olympiad in Physics, 3rd degree (2023)
-    \item Regional Russian Olympiad in Physics, 1st degree (2023)
-\end{itemize}
-}
-
-\Sep
+        -- Quick learning\\
+        -- Communication skills\\
+        -- Hard working\\
+        -- Team working
+\end{minipage}
 
 %----------------------------------------------------------------------------------------
 
 \end{document}
+
+% %----------------------------------------------------------------------------------------
+% %	HEADING
+% %----------------------------------------------------------------------------------------
+
+% \cvheading{Viktor Baldin} % Large heading - your name
+
+% \cvsubheading{Software Engeneer} % Subheading - your occupation/specialization
+
+% %----------------------------------------------------------------------------------------
+% %	ABOUT ME
+% %----------------------------------------------------------------------------------------
+
+% \aboutme{About Me}{
+% }
+
+% %----------------------------------------------------------------------------------------
+% %	EDUCATION
+% %----------------------------------------------------------------------------------------
+
+% \CVSection{Education}
+
+% %------------------------------------------------
+
+% \CVItem{Bachelor, MIPT}{
+% Bachelor in Applied Mathematics and Physics,
+% Department of Radio Engeneering and Cybernetics (2023 - present)
+% }
+
+% \CVItem{Educational courses}{
+% \begin{itemize}
+%     \item I. R. Dedinsky's "Introduction to Computer System emulation, compiler technologies and
+%     industrial programming" (2023 - 2024)
+% \end{itemize}
+% }
+
+% %------------------------------------------------
+
+% \Sep % Extra whitespace after the end of a major section
+
+
+% %----------------------------------------------------------------------------------------
+% %	EXPERIENCE
+% %----------------------------------------------------------------------------------------
+
+% \CVSection{Projects}
+
+% %------------------------------------------------
+
+% \CVItem{Processor}{
+% Simple CPU emulator with its own stack-based architecture.
+% Numeric calculations implemented as floating point arithmetic only.\\
+% Link: \url{https://github.com/victorbaldin56/processor}
+% }
+
+% \CVItem{Differenciator}{
+% Derivative calculator with step-by-step solution. Creates AST for
+% math expression using recursive descent and evaluates a derivative by transforming AST.
+% Supports output as PDF using {\LaTeX}, also uses GraphViz package to dump the input AST.
+% Additionally, annotates PDF with solution using random ChatGPT-generated phrases.
+% Link: \url{https://github.com/victorbaldin56/differenciator}
+% }
+
+% \CVItem{DOS Tasks}{
+% Relatively small pure assembly programs for MS-DOS.
+% The main purpose of this part was to get general understanding of x86 assembly and
+% hardware interrupts handling.\\
+% Link: \url{https://github.com/victorbaldin56/dos-tasks}
+% }
+
+% \CVItem{Miniprintf}{
+% Simplified implementation of \texttt{printf} function in pure NASM assembly for x86-64
+% Linux.\\
+% Link: \url{https://github.com/victorbaldin56/miniprintf}
+% }
+
+% \CVItem{Mandelbrot}{
+% Mandelbrot fractal
+% renderer built with use of SFML. The main goal of this project was the
+% research of SIMD instructions to speed up calculations up to several times. On my machine
+% I have reached 7.4 times acceleration with use of AVX2 instructions.
+
+% %----------------------------------------------------------------------------------------
+% %	NEW PAGE DELIMITER
+% %	Place this block wherever you would like the content of your CV to go onto the next page
+% %----------------------------------------------------------------------------------------
+
+% \clearpage % Start a new page
+
+% \userinformation % Print your information in the left column
+
+% \framebreak % End of the first column
+
+% Link: \url{https://github.com/victorbaldin56/mandelbrot_fractal}
+% }
+
+% \CVItem{Hash Map}{
+% Accelerated implementation of hash map.
+% The first part of this work was to compare hash functions by their distribution.
+% The second part was to master skills of agressive platform-dependent optimizations with intrinsics and assembly.
+% As the result, search by key has been speeded up by 2.8 times.\\
+% Link: \url{https://github.com/victorbaldin56/hashmap}
+% }
+
+% \CVItem{Binary Translator}{
+% Translates my CPU emulator's bytecode to native x86 instructions.
+% Supports generating NASM assembly or JIT. Has extensible architecture and internal
+% intermediate representation (IR), that allows to create backends for multiple
+% target architectures. This is the same principle that underlies the work of GCC and
+% LLVM infrastructures. \\
+% Link: \url{https://github.com/victorbaldin56/binary_translator}
+% }
+
+% \Sep % Extra whitespace after the end of a major section
+
+% \CVSection{Soft Skills}
+
+% \CVItem{Languages}{
+% \begin{tabular}{p{0.3\textwidth} p{0.3\textwidth}}
+%     \bluebullet Russian (native) & \bluebullet English (Intermediate)
+% \end{tabular}}
+
+% \CVItem{Personal Qualities}
+% {\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth}}
+% \bluebullet Purposeful &  \bluebullet Hard-working \\
+% \bluebullet Sociable & \bluebullet Reliable\\
+% \bluebullet Creative &  \bluebullet Quick learner\\
+% \bluebullet Punctual &  \bluebullet Critical thinker\\
+% \end{tabular}}
+
+% \Sep
+
+% \CVSection{Hard Skills}
+
+% %------------------------------------------------
+
+% \CVItem{Programming}
+% {\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth}}
+% \bluebullet C &  \bluebullet C++ \\
+% \bluebullet x86 Assembly & \bluebullet Unix Shell\\
+% \bluebullet Python &  \bluebullet \LaTeX\\
+% \bluebullet Make &   \bluebullet CMake\\
+% \end{tabular}}
+
+% %------------------------------------------------
+
+% \CVItem{Toolchain}
+% {\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth}}
+% \bluebullet Compilers (GCC, Clang) &  \bluebullet Debuggers (GDB) \\
+% \bluebullet Assemblers (NASM) &  \bluebullet Disassemblers (objdump)  \\
+% \bluebullet Profilers (Perf, Valgrind) & \bluebullet Version control (Git)\\
+% \end{tabular}}
+
+% %------------------------------------------------
+
+% \Sep % Extra whitespace after the end of a major section
+
+% \CVSection{Grades}
+
+% \CVItem{GPA Overall}{
+% 7.7/10
+% }
+
+% \CVItem{GPA for Programming}{
+% 7.5/10
+% }
+
+% \Sep
+
+% \CVSection{Awards}
+
+% \CVItem{Olympiads}{
+% \begin{itemize}
+%     \item Phystech Olympiad in Physics, 2nd degree (2023)
+%     \item Kurchatov Olympiad in Physics, 2nd degree (2023)
+%     \item Rosatom Olympiad in Physics, 3rd degree (2023)
+%     \item Regional Russian Olympiad in Physics, 1st degree (2023)
+% \end{itemize}
+% }
+
+% \Sep
+
+% %----------------------------------------------------------------------------------------
+
+% \end{document}
